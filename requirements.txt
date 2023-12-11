@@ -1,0 +1,5 @@
+notebook
+flask
+scikit-learn
+pandas
+sqlalchemy

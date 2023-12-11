@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Add a New Message {% endblock %}</h1>
+    <br>
+    <div><li>prol (proline): range 278-985</li>
+        <li>flav (flavanoids): range 0.3-6</li>
+        <li>col (color_intensity): range 1.28-13</li>
+        <li>dilwin (od280/od315_of_diluted_wines): range 1.27-4</li>
+        <li>alc (alcohol): range 11.0-15.0-985</li>
+        <li>hue (hue): range 0.48-1.71</li>
+        <li>phen (total_phenols): range 0.98-3.88</li></div>
+    <br>
+    <br>
+    <form method="post">
+        <label for="prol">Proline</label>
+        <br>
+        <input type="text" name="prol"
+               placeholder="Proline"
+               value="{{ request.form['prol'] }}"></input>
+        <br>
+
+        <label for="flav">Flavanoids</label>
+        <br>
+        <input type="text" name="flav"
+               placeholder="Flavanoids"
+               value="{{ request.form['flav'] }}"></input>
+        <br>
+
+        <label for="col">Color Intensity</label>
+        <br>
+        <input type="text" name="col"
+               placeholder="Color Intensity"
+               value="{{ request.form['col'] }}"></input>
+
+        <br>
+        <label for="dilwin">Diluted Wine</label>
+        <br>
+        <input type="text" name="dilwin"
+               placeholder="Diluted WineColor Intensity"
+               value="{{ request.form['dilwin'] }}"></input>
+        <br>
+
+        <label for="alc">Alcohol</label>
+        <br>
+        <input type="text" name="alc"
+               placeholder="Alcohol"
+               value="{{ request.form['alc'] }}"></input>
+        <br>
+
+        <label for="hue">Hue</label>
+        <br>
+        <input type="text" name="hue"
+               placeholder="Hue"
+               value="{{ request.form['hue'] }}"></input>
+        <br>
+
+        <label for="phen">Total Phenols</label>
+        <br>
+        <input type="text" name="phen"
+               placeholder="Total Phenols"
+               value="{{ request.form['phen'] }}"></input>
+        <br>
+
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div>PREDICTION: {{prediction}}</div>
+{% endblock %}
